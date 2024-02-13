@@ -1,0 +1,14 @@
+{ "testParameters":
+  [
+    {
+      "itemName": "Experimental",
+      "itemExpectedPrice": 25,
+      "quantity": 2
+    },
+    {
+      "itemName": "Unusable Security",
+      "itemExpectedPrice": 25,
+      "quantity": 3
+    }
+  ]
+}
