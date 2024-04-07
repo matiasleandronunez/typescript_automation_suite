@@ -49,6 +49,9 @@ or simply execute
 sh ./run_regression.sh
 ```
 
+
+For this demo results are reported in list + html formats, with trace and video on for all tests. These can be disabled, or (changed to be appended only on failure for instance) through the configuration file [playwright.config.ts](playwright.config.ts)
+
 You can experiment other configurations such as browsers, workers, etc! Refer to playwright documentation on the matter:
 https://playwright.dev/docs/test-configuration
 

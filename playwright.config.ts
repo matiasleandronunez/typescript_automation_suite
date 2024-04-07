@@ -17,15 +17,21 @@ export default defineConfig({
     // Opt out of parallel tests on CI.
     workers: process.env.CI ? 1 : undefined,
 
-    // Reporter to use
-    reporter: 'list',
+    // Reporters to use
+    reporter: [
+        ['list'],
+        ['html', {  open: 'always' }]
+    ],
 
     use: {
         // Base URL to use in actions like `await page.goto('/')`.
         baseURL: 'http://127.0.0.1:3000',
 
-        // Collect trace when retrying the failed test.
-        trace: 'on-first-retry',
+        // Collect trace, see with https://playwright.dev/docs/trace-viewer
+        trace: 'on',
+
+        // Collect video of tests being run https://playwright.dev/docs/videos
+        video: 'on',
     },
 
     // Configure projects for major browsers.
