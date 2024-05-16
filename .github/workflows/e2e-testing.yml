@@ -1,0 +1,20 @@
+name: Playwright TS E2E tests
+
+on:
+  push:
+    branches:
+      - never
+  workflow_dispatch:
+
+jobs:
+  run-e2e-tests:
+    name: Deploy Test Environment and Run Playwright TS E2E tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v2
+      - name: Build the test app
+        run: docker-compose up -d database appserver
+      - name: Run Playwright tests
+        run: docker-compose up --exit-code-from tests tests
