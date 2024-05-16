@@ -14,5 +14,7 @@ jobs:
     steps:
       - name: Checkout the repo
         uses: actions/checkout@v2
-      - name: Build the docker-compose stack
-        run: docker-compose up --build --force-recreate
+      - name: Build the test app
+        run: docker-compose up -d database appserver
+      - name: Run Playwright tests
+        run: docker-compose up --exit-code-from tests tests
