@@ -19,11 +19,9 @@ setup('DB setup', async ({}) => {
 
     const { USER_TO_ADD, USER_TO_DELETE, USER_EXISTING } = process.env;
 
-    let response = await requestHelper.addCustomer(JSON.parse(USER_TO_DELETE));
-    expect(response.status()).toEqual(201);
 
-    response = await requestHelper.addCustomer(JSON.parse(USER_EXISTING));
-    expect(response.status()).toEqual(201);
+    let response = await Promise.all([requestHelper.addCustomer(JSON.parse(USER_TO_DELETE)), requestHelper.addCustomer(JSON.parse(USER_EXISTING))]);
+    expect(response.map(r => r.status())).toEqual([201,201]);
 
     await requestContext.dispose();
 });
