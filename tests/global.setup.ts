@@ -6,7 +6,7 @@ import {CONFIG} from "../variables.config";
 setup('DB setup', async ({}) => {
     // Type check env vars to make sure aren't undefined
     if(CONFIG.baseAPIHost === undefined || CONFIG.baseHost === undefined){
-        throw new Error('Either BASE_URL, BASE_API_URL or both env vars are Undefined. Please set them in the run environment them and re launch');
+        throw new Error('Either BASE_URL, BASE_API_URL or both env vars are undefined. Please set them in the run environment and re launch');
     }
 
     //Get a context for data preparation
