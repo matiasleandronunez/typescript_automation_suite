@@ -1,7 +1,6 @@
-import { APIRequestContext, APIResponse, request, expect, test as base } from '@playwright/test';
+import { APIRequestContext, request, test as base } from '@playwright/test';
 import { CONFIG } from '../variables.config';
 import {APIRequestsHelper} from "../helpers/apiRequestsWrapper";
-import {HomePage} from "../pages/homePage";
 
 // declare the types of your fixtures
 interface MyFixtures {
