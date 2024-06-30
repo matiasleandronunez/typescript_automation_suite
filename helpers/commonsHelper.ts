@@ -9,14 +9,14 @@ export function priceStringToFloat(priceString : string){
 }
 
 export function createRandomUser() : Customer {
-    let fullname = faker.person.firstName() + ' ' + faker.person.lastName();
+    let fullName = faker.person.firstName() + ' ' + faker.person.lastName();
 
     return {
-        name: fullname,
+        name: fullName,
         address: faker.location.streetAddress(),
         email: faker.internet.email(),
         phone: faker.phone.number(),
-        username: fullname.toLowerCase().replace(/\s/g, ''),
+        username: fullName.toLowerCase().replace(/\s/g, ''),
         password: faker.internet.password(),
         enabled: false,
         role: "USER"

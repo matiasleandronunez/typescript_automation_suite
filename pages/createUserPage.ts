@@ -1,4 +1,4 @@
-import { expect, type Locator, type Page } from '@playwright/test';
+import { type Locator, type Page } from '@playwright/test';
 import { BasePage} from "./basePage";
 
 export class CreateUserPage extends BasePage{
@@ -19,10 +19,6 @@ export class CreateUserPage extends BasePage{
     }
 
     async submitForm(){
-        await this.signUpButton.click();
-    }
-
-    async productPriceInCart(productTitle : string){
         await this.signUpButton.click();
     }
 }

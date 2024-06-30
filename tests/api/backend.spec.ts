@@ -1,5 +1,4 @@
 import { expect, test } from '../../fixtures/fixtureBuilder';
-import {APIResponse} from "@playwright/test";
 
 test.describe.parallel('API testing @api_feature', () => {
     const { USER_TO_ADD, USER_TO_DELETE, USER_EXISTING } = process.env;

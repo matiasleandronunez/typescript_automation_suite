@@ -1,4 +1,4 @@
-import { APIRequestContext, APIResponse, request, expect, test as base } from '@playwright/test';
+import { APIRequestContext } from '@playwright/test';
 import { JSONObject } from "./typesHelper";
 
 export class APIRequestsHelper{

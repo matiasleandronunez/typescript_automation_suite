@@ -1,6 +1,6 @@
 import { expect, test } from '../../fixtures/fixtureBuilder';
 import {HomePage} from "../../pages/homePage";
-import {Customer, JSONObject} from "../../helpers/typesHelper";
+import {Customer} from "../../helpers/typesHelper";
 import {CreateUserPage} from "../../pages/createUserPage";
 import {createRandomUser} from "../../helpers/commonsHelper";
 

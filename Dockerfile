@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/playwright:v1.43.0-focal
+FROM mcr.microsoft.com/playwright:v1.45.0-focal
 
 # Set the work directory for the application
 WORKDIR /app
@@ -18,5 +18,5 @@ COPY ./ ./
 # Install the dependencies in Node environment
 RUN npm install
 
-# keep alive, remove this line for
+# keep alive
 CMD ["tail", "-f", "/dev/null"]
