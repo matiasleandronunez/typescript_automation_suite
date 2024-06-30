@@ -26,7 +26,7 @@ setup('DB setup', async ({}) => {
     process.env.USER_TO_DELETE = JSON.stringify(createRandomUser());
     process.env.USER_EXISTING = JSON.stringify(createRandomUser());
 
-    const { USER_TO_ADD, USER_TO_DELETE, USER_EXISTING } = process.env;
+    const { USER_TO_DELETE, USER_EXISTING } = process.env;
 
 
     let response = await Promise.all([
